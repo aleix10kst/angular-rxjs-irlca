@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<select [formControl]="filterControl">
+  <option value="all">All</option>
+  <option value="completed">Completed</option>
+  <option value="uncompleted">Uncompleted</option>
+</select>
+<div>
+  <ul>
+    <li *ngFor="let assessment of assessments$ | async">
+      {{ assessment.title }} - {{ assessment.user }}
+    </li>
+  </ul>
+</div>
